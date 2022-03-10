@@ -1,0 +1,636 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Nunito Sans", sans-serif;
+	background-color: #1d1d1d;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	height: 100vh;
+}
+
+/* nav-section */
+.nav-section .navbar {
+	width: 8rem;
+	background-color: #181818;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: auto;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-section .navbar img {
+	margin-bottom: 180px;
+}
+
+.nav-section ul li a {
+	color: #909096;
+}
+
+.nav-section ul li a:hover {
+	color: aqua;
+	transition: 0.3s ease-in-out;
+}
+
+.nav-section ul.primary-nav {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 160px;
+	width: auto;
+	text-align: center;
+	display: block;
+	font-size: 1rem;
+	line-height: 3rem;
+	border-top: #2b2a2a 1px solid;
+}
+
+a.active,
+a {
+	text-decoration: none;
+}
+
+li {
+	border-bottom: 1px solid #2b2a2a;
+}
+
+ol,
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+li.social {
+	border: 0;
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	margin-left: 15px;
+	margin-right: 8px;
+}
+
+li.social i {
+	font-size: 16px;
+}
+
+li.nav-item{
+	border-bottom: 0;
+}
+
+.navbar-nav{
+	margin-bottom: 10px;
+}
+
+a.nav-link{
+	margin: 0;
+	border: none;
+	float: right;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+/* Main nav */
+@media only screen and (max-width: 989px) {
+	.nav-section {
+		display: none;
+	}
+}
+/* Sub nav */
+@media only screen and (min-width: 989px) {
+	.navbar.navbar-expand-lg.navbar-dark {
+		background-color: #181818;
+		display: none;
+	}
+}
+
+/* about-section */
+section#about-section.about-section {
+	height: 100vh;
+	width: auto;
+}
+
+h1 {
+	font-size: 7rem;
+	color: #ffffff;
+	font-weight: 900;
+	line-height: 6rem;
+}
+
+.ha {
+	margin-top: 3em;
+}
+
+.about-section .container .text {
+	/* position: relative; */
+	color: aqua;
+}
+
+/* About Section Button */
+a.btn1 {
+	position: absolute;
+	color: aqua;
+	letter-spacing: 3px;
+	padding: 12px 35px;
+	border: 1px solid aqua;
+	top: 43rem;
+	left: 14.5em;
+	overflow: hidden;
+}
+
+a.btn1:hover {
+	color: #2b2a2a;
+	border: 1px solid #fff;
+}
+
+a.btn1::before {
+	content: "";
+	position: absolute;
+	background: aqua;
+	width: 20em;
+	height: 100px;
+	top: 0.1px;
+	left: 0.1px;
+	border-right: 40px solid #2b2a2a;
+	border-top: 50px solid aqua;
+	transform: translateX(-100%);
+	transition: 0.3s ease-in-out;
+	z-index: -1;
+}
+
+a.btn1:hover::before {
+	transform: translateX(0);
+}
+
+@media only screen and (min-width: 1450px) {
+	.about-section::before {
+		content: "about";
+		position: absolute;
+		color: #d1d1d120;
+		font-size: 50rem;
+		font-weight: bolder;
+		background: #07616d69;
+		background-image: url(../images/cursor.svg);
+		background-repeat: no-repeat;
+		width: 10%;
+		height: 15rem;
+		left: 50rem;
+	}
+	.about-section::after {
+		content: "@b-vhiewz";
+		position: absolute;
+		color: #0e3849b2;
+		font-size: 40px;
+		font-weight: bolder;
+		background-repeat: repeat-x;
+		width: 50%;
+		height: 20em;
+		left: 31em;
+		top: 280px;
+	}
+}
+/* --------END---------- */
+
+/* SKILLS */
+#skills-section.skills-section {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.skills-section .container {
+	margin-top: 0;
+	padding-top: 0;
+	display: flex;
+}
+
+.col-md-6 .container {
+	display: flex;
+}
+
+#skills-section.skills-section .heading h2 {
+	font-family: "Nunito Sans", sans-serif;
+	text-transform: capitalize;
+	margin-top: 4em;
+	font-weight: 400;
+	font-size: 3.5rem;
+	color: aqua;
+	position: relative;
+	text-align: left;
+	display: inline-block;
+	padding-bottom: 0.625rem;
+}
+
+#skills-section.skills-section p {
+	padding: 0;
+	padding-bottom: 20px;
+	margin: 0;
+	font-size: medium;
+	text-align: left;
+}
+
+@media only screen and (min-width: 1450px) {
+	.skills-section::before {
+		content: "skills";
+		position: absolute;
+		color: #d1d1d119;
+		font-size: 50rem;
+		font-weight: bolder;
+		left: 50rem;
+	}
+	.skills-section.skills-section::after {
+		content: "skills";
+		position: relative;
+		color: #0e38494f;
+		font-size: 100em;
+		font-weight: bolder;
+		background-repeat: repeat-x;
+		width: 100%;
+		height: 20em;
+		right: 1em;
+		bottom: 1em;
+		z-index: -1;
+	}
+}
+@media only screen and (max-width: 1450px){
+	#skills-section.skills-section .heading h2.sk{
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.cube{
+		top: 0;
+	}
+
+}
+
+/* Rotating cube */
+@keyframes turn {
+	from {
+		transform: rotate3d(0, 0, 0, 0);
+	}
+	to {
+		transform: rotate3d(1, 1, 0, 360deg);
+	}
+}
+
+.cube {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	top: 15em;
+	left: 14em;
+	transform-style: preserve-3d;
+	animation: turn 10s linear infinite;
+}
+
+.face {
+	position: absolute;
+	display: flex;
+	background: aqua;
+	border: 2px solid #aeaeae;
+	opacity: 0.9;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	justify-content: center;
+	transition: transform 500ms;
+}
+
+.front {
+	transform: translateZ(150px);
+}
+
+.back {
+	transform: translateZ(-150px) rotateY(180deg);
+}
+
+.left {
+	transform: translateX(-150px) rotateY(-90deg);
+}
+
+.right {
+	transform: translateX(150px) rotateY(90deg);
+}
+
+.top {
+	transform: translateY(-150px) rotateX(90deg);
+}
+
+.bottom {
+	transform: translateY(150px) rotateX(-90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cube {
+		animation: none;
+		transform: rotate3d(1, 1, 0, 45deg);
+	}
+}
+/* END OF CUBE */
+
+/* WORKS SECTION */
+#work-section.work-section .container {
+	height: 90vh;
+	overflow: hidden;
+	padding: 0;
+	display: block;
+}
+
+#work-section.work-section .heading h3 {
+	font-family: "Nunito Sans", sans-serif;
+	text-transform: capitalize;
+	margin-top: 3em;
+	font-weight: 400;
+	font-size: 3rem;
+	color: aqua;
+	position: relative;
+	text-align: left;
+	display: inline-block;
+	padding-bottom: 0.625rem;
+}
+
+/* CONTACT SECTION */
+#contact-section {
+	height: 100vh;
+	overflow: hidden;
+	padding: 0;
+}
+
+#contact-section .container {
+	margin-top: 0%;
+	padding-top: 100px;
+}
+
+#contact-section .container {
+	display: flex;
+}
+
+#contact-section .heading {
+	display: block;
+	margin: 1.25rem 0;
+	position: relative;
+}
+
+#contact-section .heading h4 {
+	font-size: 3rem;
+	text-transform: capitalize;
+	font-weight: 400;
+	color: aqua;
+	position: relative;
+	margin: 0.625rem 0;
+	display: inline-block;
+	padding-bottom: 0.625rem;
+}
+
+#contact-section .heading h4::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 45%;
+	height: 0.3125rem;
+	background: #5a5a5a;
+}
+
+#contact-section form {
+	display: block;
+	margin: 1.25rem 0;
+	position: relative;
+}
+
+#contact-section form .form-group {
+	display: inline-block;
+	margin: 1.25rem 0;
+	width: 100%;
+}
+
+#contact-section form .form-group .form-control {
+	display: inline-block;
+	width: 100%;
+	background: #131313b8;
+	border-radius: 0;
+	min-height: 3.125rem;
+	height: 3.125rem;
+	border: 0;
+	color: #9e9e9e;
+	font-size: 0.9375rem;
+	appearance: none;
+}
+
+#contact-section form .form-group .form-control:active,
+#contact-section form .form-group .form-control:focus {
+	background: #131313;
+}
+
+#contact-section form .form-group textarea {
+	display: inline-block;
+	width: 100%;
+	background: #131313bd;
+	border-radius: 0;
+	border: 0;
+	color: #909096;
+	font-size: 0.9375rem;
+	transform-origin: all 5s;
+	appearance: none;
+	padding: 0.375rem 0.75rem;
+}
+
+.col-6.imageBackground img {
+	margin: 0;
+	padding: 0;
+	border-radius: 50%;
+	position: absolute;
+	width: 40%;
+ 	padding-left: 8em;
+}
+
+#contact-section form .form-group input.form-control:focus,
+#contact-section form .form-group input.form-control:active,
+#contact-section form .form-group textarea:focus,
+#contact-section form .form-group textarea:active {
+	outline: none;
+	box-shadow: none;
+}
+
+/* Contact Section Button */
+input.btn2 {
+	position: absolute;
+	color: aqua;
+	background-color: #181818;
+	letter-spacing: 3px;
+	padding: 12px 20px;
+	border: 1px solid aqua;
+	top: 30rem;
+	left: 29.6em;
+	overflow: hidden;	
+}
+
+input.btn2:hover {
+	color: #2b2a2a;
+	border: 1px solid #fff;
+}
+
+input.btn2::before {
+	content: "";
+	position: absolute;
+	background: aqua;
+	width: 20em;
+	height: 100px;
+	top: 0.1px;
+	left: 0.1px;
+	border-right: 30px solid #1f1f1f;
+	border-top: 60px solid aqua;
+	transform: translateX(-100%);
+	transition: 0.4s ease-in-out;
+	z-index: 1;
+}
+
+input.btn2:hover::before {
+	transform: translateX(0);
+}
+/* --------END OF CONTACT----------- */
+
+/* FOOTER */
+.footer-section {
+	background-color: #181818;
+}
+
+.footer {
+	background-color: #181818;
+	width: 100%;
+	height: 2.8em;
+}
+
+ul.socials.foot li.social{
+	color: #909096;
+	padding: 10px;
+}
+
+.footer-section ul.socials.foot li:hover {
+	color: aqua;
+	cursor: pointer;
+	transition: 0.7s ease-in-out;
+}
+
+/* Cursor */
+@media only screen and (min-width: 1450px){
+	.cursor {
+		width: 10px;
+		height: 10px;
+		border: 1px solid white;
+		border-radius: 50%;
+		position: absolute;
+		transition-duration: 200ms;
+		transition-timing-function: ease-out;
+		animation: cursorAnim 0.7s infinite alternate;
+		pointer-events: none;
+		z-index: 3;
+	}
+	
+	@keyframes cursorAnim {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(0.7);
+		}
+	}
+	
+	@keyframes cursorAnim2 {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(0.4);
+		}
+	}
+	
+	@keyframes cursorAnim3 {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(3);
+		}
+		100% {
+			transform: scale(1);
+			opacity: 0;
+		}
+	}
+	
+	.expand {
+		animation: cursorAnim3 0.5s forwards;
+		border: 1px solid aqua;
+	}
+	
+	p {
+		color: white;
+		font-family: "arial";
+		text-align: center;
+		margin-top: 50px;
+		font-size: 1.4em;
+	}
+	
+	a {
+		color: teal;
+	}
+}
+/* ----------CURSOR END---------- */
+
+/* BOUNCE TEXT */
+.a {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	display: inline-block;
+}
+
+.a:hover {
+	color: aqua;
+	animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+/* -------BOUNCE TEXT END--------- */
