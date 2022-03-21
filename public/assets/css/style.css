@@ -9,7 +9,6 @@ html {
 
 body {
 	font-family: "Nunito Sans", sans-serif;
-	background-color: #1d1d1d;
 	box-sizing: border-box;
 	overflow-x: hidden;
 	height: 100vh;
@@ -124,6 +123,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
 
 /* about-section */
 section#about-section.about-section {
+	background-color: #1d1d1d;
 	height: 100vh;
 	width: auto;
 	overflow: hidden;
@@ -154,6 +154,7 @@ a.btn1 {
 	top: 40rem;
 	left: 11em;
 	overflow: hidden;
+	z-index: 1;
 }
 
 a.btn1:hover {
@@ -211,10 +212,26 @@ a.btn1:hover::before {
 
 /* SKILLS */
 #skills-section.skills-section {
-	height: 80vh;
-	width: auto;	
+	height: 500px;
+	background-blend-mode: multiply;
+	background: rgb(0, 68, 255) url(../images/background/background\ 2.png);
+	background-attachment: fixed;
+	background-size: cover;
+	width: auto;
 	overflow: hidden;
+	/* transform: translateX(400%); */
+	/* transition: 3s ease; */
 }
+
+.paralax{
+	background-image: url(../images/background/background\ 2.png);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* #skills-section.skills-section.show {
+	transform: translateX(0);
+} */
 
 /* Two column layout */
 div.row.columns {
@@ -226,18 +243,13 @@ div.col-md-6.column {
 	width: 100%;
 }
 
-div.col-md-6.column.col1{
+div.col-md-6.column.col1 {
+	margin-top: 10em;
+}
+
+div.col-md-6.column.col2 {
 	margin-top: 12em;
 }
-
-div.col-md-6.column.col2{
-	margin-top: 14em;
-}
-
-
-/* div.cube{
-	margin-top: 8em;
-} */
 
 @media (min-width: 48em) {
 	div.col-md-6.column {
@@ -255,7 +267,7 @@ div.col-md-6.column.col2{
 #skills-section.skills-section .heading h2 {
 	font-family: "Nunito Sans", sans-serif;
 	text-transform: capitalize;
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 3rem;
 	color: aqua;
 	text-align: left;
@@ -264,26 +276,12 @@ div.col-md-6.column.col2{
 #skills-section.skills-section p {
 	padding: 0;
 	margin: 0;
-	color: #fff;
+	color: #e9e9e9;
+	font-weight: bold;
 	font-size: medium;
 	text-align: left;
 }
 
-@media only screen and (min-width: 989px) {
-	.skills-section.skills-section::after {
-		content: "skills";
-		position: relative;
-		color: #0e38494f;
-		font-size: 100em;
-		font-weight: bolder;
-		background-repeat: repeat-x;
-		width: auto;
-		height: 20em;
-		right: .7em;
-		bottom: .7em;
-		z-index: -1;
-	}
-}
 @media only screen and (max-width: 1450px) {
 	#skills-section.skills-section .heading h2.sk {
 		margin: auto;
@@ -307,8 +305,8 @@ div.col-md-6.column.col2{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
 	transform-style: preserve-3d;
 	animation: turn 10s linear infinite;
 }
@@ -320,34 +318,34 @@ div.col-md-6.column.col2{
 	border: 2px solid #aeaeae;
 	opacity: 0.9;
 	align-items: center;
-	width: 300px;
-	height: 300px;
+	width: 100px;
+	height: 100px;
 	justify-content: center;
 	transition: transform 500ms;
 }
 
 .front {
-	transform: translateZ(150px);
+	transform: translateZ(125px);
 }
 
 .back {
-	transform: translateZ(-150px) rotateY(180deg);
+	transform: translateZ(-125px) rotateY(180deg);
 }
 
 .left {
-	transform: translateX(-150px) rotateY(-90deg);
+	transform: translateX(-125px) rotateY(-90deg);
 }
 
 .right {
-	transform: translateX(150px) rotateY(90deg);
+	transform: translateX(125px) rotateY(90deg);
 }
 
 .top {
-	transform: translateY(-150px) rotateX(90deg);
+	transform: translateY(-125px) rotateX(90deg);
 }
 
 .bottom {
-	transform: translateY(150px) rotateX(-90deg);
+	transform: translateY(125px) rotateX(-90deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -359,17 +357,14 @@ div.col-md-6.column.col2{
 /* END OF CUBE */
 
 /* WORKS SECTION */
-#work-section.work-section .container {
-	height: 90vh;
-	overflow: hidden;
-	padding: 0;
-	display: block;
+#work-section.work-section {
+	background-color: #2b2a2a;
 }
 
 #work-section.work-section .heading h3 {
 	font-family: "Nunito Sans", sans-serif;
 	text-transform: capitalize;
-	margin-top: 3em;
+	margin-top: 20px;
 	font-weight: 400;
 	font-size: 3rem;
 	color: aqua;
@@ -379,9 +374,87 @@ div.col-md-6.column.col2{
 	padding-bottom: 0.625rem;
 }
 
+/* Caroucel */
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+	margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	bottom: 3rem;
+	z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+	height: 32rem;
+}
+.carousel-item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 32rem;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+.marketing h2 {
+	font-weight: 400;
+}
+.marketing .col-lg-4 p {
+	margin-right: 0.75rem;
+	margin-left: 0.75rem;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+	margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -0.05rem;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+	/* Bump up size of carousel content */
+	.carousel-caption p {
+		margin-bottom: 1.25rem;
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+
+	.featurette-heading {
+		font-size: 50px;
+	}
+}
+
+@media (min-width: 62em) {
+	.featurette-heading {
+		margin-top: 7rem;
+	}
+}
+/* Caroucel */
+
 /* CONTACT SECTION */
 #contact-section {
-	height: 100vh;
 	padding: 0;
 }
 
@@ -390,25 +463,20 @@ div.col-md-6.column.col2{
 	padding-top: 100px;
 }
 
-#contact-section .container {
-	display: flex;
-}
-
 #contact-section .heading {
 	display: block;
-	margin: 1.25rem 0;
+	margin: 5px 0;
 	position: relative;
 }
 
 #contact-section .heading h4 {
-	font-size: 3rem;
+	font-size: 2rem;
 	text-transform: capitalize;
 	font-weight: 400;
-	color: aqua;
+	color: rgb(0, 202, 202);
 	position: relative;
-	/* margin: 0.625rem 0; */
 	display: inline-block;
-	padding-bottom: 0.625rem;
+	padding-bottom: 0.3rem;
 }
 
 #contact-section .heading h4::before {
@@ -418,60 +486,51 @@ div.col-md-6.column.col2{
 	bottom: 0;
 	width: 45%;
 	height: 0.3125rem;
-	background: #5a5a5a;
+	background: #8d8d8d;
 }
 
 #contact-section form {
 	display: block;
-	margin: 1.25rem 0;
+	margin: 1rem 0;
 	position: relative;
 }
 
 #contact-section form .form-group {
 	display: inline-block;
-	margin: 1.25rem 0;
+	margin: 1rem 0;
 	width: 100%;
 }
 
 #contact-section form .form-group .form-control {
 	display: inline-block;
 	width: 100%;
-	background: #131313b8;
+	background: rgb(0, 202, 202);
 	border-radius: 0;
-	min-height: 3.125rem;
-	height: 3.125rem;
+	min-height: 2rem;
+	height: 2rem;
 	border: 0;
-	color: #9e9e9e;
+	color: #ffffff;
 	font-size: 0.9375rem;
 	appearance: none;
 }
 
 #contact-section form .form-group .form-control:active,
 #contact-section form .form-group .form-control:focus {
-	background: #131313;
+	background: #363636;
 }
 
 #contact-section form .form-group textarea {
 	display: inline-block;
 	width: 100%;
-	background: #131313bd;
+	height: 150px;
+	background: rgb(0, 202, 202);
 	border-radius: 0;
 	border: 0;
-	color: #909096;
+	color: #fff;
 	font-size: 0.9375rem;
 	transform-origin: all 5s;
 	appearance: none;
 	padding: 0.375rem 0.75rem;
-}
-
-.col-6.imageBackground img {
-	margin: 0;
-	padding: 0;
-	border-radius: 50%;
-	position: absolute;
-	width: 40%;
-	padding-left: 8em;
-	z-index: -1;
 }
 
 #contact-section form .form-group input.form-control:focus,
@@ -485,22 +544,78 @@ div.col-md-6.column.col2{
 /* Contact Section Button */
 input.btn2 {
 	position: absolute;
-	color: aqua;
-	background-color: #181818;
-	letter-spacing: 3px;
-	padding: 12px 20px;
-	border: 1px solid aqua;
-	top: 30rem;
-	left: 29.6em;
+	color: rgb(0, 202, 202);
+	background-color: #2c2c2c88;
+	letter-spacing: 1px;
+	padding: 10px 15px;
+	/* border: 1px solid rgba(0, 255, 255, 0.568); */
+	top: 20rem;
+	left: auto;
 	overflow: hidden;
 	z-index: 1;
 }
 
 input.btn2:hover {
-	color: #2b2a2a;
-	background-color: aqua;
+	color: #ffffff;
+	background-color: rgb(0, 202, 202);
 	border: 1px solid #fff;
 	transition: 0.5s ease-in-out;
+}
+
+.gfq-wrap {
+	z-index: 9999999;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+}
+.gfq-badge {
+	background: rgb(0, 202, 202);
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+	transition: all 0.1s ease-in-out;
+	transform: scale(1);
+	float: right;
+}
+.gfq-badge img {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	border: none !important;
+	width: 80% !important;
+}
+.gfq-badge:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.gfq-panel {
+	width: 400px; /*Panel width*/
+	height: 500px; /*Panel height*/
+	max-width: 400px; /*Mac Panel width*/
+	max-height: 800px; /*Max Panel height*/
+	background: #f9fafa;
+	box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1);
+	position: absolute;
+	bottom: 40px;
+	right: 0px;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 30px;
+	border: 1px solid #d9e0e3;
+}
+.panel-active {
+	bottom: 80px;
+	opacity: 100;
+}
+.gfield.no-label > .gfield_label {
+	display: none;
+}
+.gfq-panel input[type="submit"] {
+	width: 100%;
 }
 /* --------END OF CONTACT----------- */
 
@@ -517,7 +632,8 @@ input.btn2:hover {
 
 ul.socials.foot li.social {
 	color: #909096;
-	padding: 10px;
+	padding: 0 10px;
+	margin: auto;
 }
 
 .footer-section ul.socials.foot li:hover {
@@ -638,7 +754,7 @@ ul.socials.foot li.social {
 /* Media Queries*/
 @media only screen and (max-width: 720px) {
 	section#about-section.about-section {
-		height: 60vh;
+		height: 70vh;
 		width: auto;
 	}
 
@@ -647,10 +763,10 @@ ul.socials.foot li.social {
 	}
 
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 		color: #ffffff;
-		font-weight: 700;
-		line-height: 4rem;
+		font-weight: 600;
+		line-height: 2.5rem;
 	}
 
 	.ha {
@@ -663,16 +779,21 @@ ul.socials.foot li.social {
 	}
 
 	#skills-section.skills-section {
-		height: 87vh;
+		height: 90vh;
 	}
 
-	div.col-md-6.column.col1{
-		margin-top: 3em;
+	#skills-section.skills-section .heading h2 {
+		font-size: 2rem;
+		font-weight: 400;
 	}
-	
-	/* div.col-md-6.column.col2{
-		margin-top: 14em;
-	} */
+
+	div.col-md-6.column.col1 {
+		margin-top: 5em;
+	}
+
+	div.col-md-6.column.col2 {
+		margin-top: 9em;
+	}
 
 	.col-6.imageBackground {
 		display: none;
@@ -694,7 +815,7 @@ ul.socials.foot li.social {
 
 @media only screen and (max-width: 989px) and (min-width: 721px) {
 	section#about-section.about-section {
-		height: 60vh;
+		height: 70vh;
 		width: auto;
 	}
 
@@ -703,7 +824,7 @@ ul.socials.foot li.social {
 	}
 
 	h1 {
-		font-size: 4.5rem;
+		font-size: 3.8rem;
 		color: #ffffff;
 		font-weight: 700;
 		line-height: 4rem;
@@ -714,16 +835,8 @@ ul.socials.foot li.social {
 	}
 
 	a.btn1 {
-		top: 50%;
+		top: 55%;
 		left: auto;
-	}
-
-	#skills-section.skills-section {
-		height: 87vh;
-	}
-
-	div.col-md-6.column.col1{
-		margin-top: 3em;
 	}
 
 	#work-section {
@@ -733,7 +846,7 @@ ul.socials.foot li.social {
 	#contact-section {
 		height: 80vh;
 	}
-	
+
 	.col-6.imageBackground {
 		display: none;
 	}
@@ -744,7 +857,46 @@ ul.socials.foot li.social {
 	}
 }
 
-@media only screen and (max-width: 1349px) and (min-width: 989px) {
+@media only screen and (max-width: 767px) and (min-width: 721px) {
+	#skills-section.skills-section {
+		height: 90vh;
+	}
+
+	#skills-section.skills-section .heading h2 {
+		font-size: 2.8rem;
+		font-weight: 400;
+	}
+
+	div.col-md-6.column.col1 {
+		margin-top: 3em;
+	}
+
+	div.col-md-6.column.col2 {
+		margin-top: 9em;
+	}
+}
+
+/* @media only screen and (max-width: 989px;) and (min-width: 768px) { */
+/* #skills-section.skills-section {
+		height: 80vh;
+	}
+
+	#skills-section.skills-section .heading h2.sk{
+		font-size: 5rem;
+		font-weight: 100;
+	}
+
+	div.col-md-6.column.col1 {
+		margin-top: 3em;
+	}
+
+	div.col-md-6.column.col2 {
+		margin-top: 9em;
+	}
+}
+ */
+
+@media only screen and (max-width: 1349px) and (min-width: 990px) {
 	.col-6.imageBackground {
 		display: none;
 	}

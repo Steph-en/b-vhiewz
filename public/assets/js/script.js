@@ -32,6 +32,27 @@ contactForm.addEventListener('submit', (e)=> {
     xhr.send(JSON.stringify(formData))
 })
 
+// scroll effect
+const Scroll = document.querySelectorAll('#skills-section.skills-section')
+
+window.addEventListener('scroll', checkBoxes)
+
+checkBoxes()
+
+function checkBoxes() {
+    const triggerPoint = window.innerHeight / 5 * 4
+
+    Scroll.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if(boxTop < triggerPoint) {
+            box.classList.add('show')
+        } else {
+            box.classList.remove('show')
+        }
+    })
+}
+
 //h1 Bounce effect
 $(document).ready(function () {
        var letters = $('.ha').text();

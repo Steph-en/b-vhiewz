@@ -5,7 +5,7 @@ const app = express();
 
 const nodemailer = require('nodemailer');
 
-const port = process.env.port || 5000;
+const port = process.env.PORT;
 
 //middleware
 app.use(express.static('public'));
@@ -26,7 +26,7 @@ app.post('/', (req, res) => {
       pass: process.env.MAIL_PASSWORD,
       clientId: process.env.OAUTH_CLIENTID,
       clientSecret: process.env.OAUTH_CLIENT_SECRET,
-      refreshToken: process.env.OAUTH_REFRESH_TOKEN 
+      refreshToken: process.env.OAUTH_REFRESH_TOKEN
     }
   });
 
