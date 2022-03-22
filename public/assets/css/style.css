@@ -11,6 +11,7 @@ body {
 	font-family: "Nunito Sans", sans-serif;
 	box-sizing: border-box;
 	overflow-x: hidden;
+	background-color: rgb(233, 233, 224);
 	height: 100vh;
 }
 
@@ -79,8 +80,8 @@ li.social {
 	display: inline-block;
 	align-items: center;
 	justify-content: center;
-	margin-left: 15px;
-	margin-right: 8px;
+	margin-left: 13px;
+	margin-right: 5px;
 }
 
 li.social i {
@@ -219,19 +220,7 @@ a.btn1:hover::before {
 	background-size: cover;
 	width: auto;
 	overflow: hidden;
-	/* transform: translateX(400%); */
-	/* transition: 3s ease; */
 }
-
-.paralax{
-	background-image: url(../images/background/background\ 2.png);
-	background-attachment: fixed;
-	background-size: cover;
-}
-
-/* #skills-section.skills-section.show {
-	transform: translateX(0);
-} */
 
 /* Two column layout */
 div.row.columns {
@@ -358,20 +347,20 @@ div.col-md-6.column.col2 {
 
 /* WORKS SECTION */
 #work-section.work-section {
-	background-color: #2b2a2a;
+	background-color: #5a9292;
 }
 
-#work-section.work-section .heading h3 {
-	font-family: "Nunito Sans", sans-serif;
-	text-transform: capitalize;
-	margin-top: 20px;
-	font-weight: 400;
-	font-size: 3rem;
-	color: aqua;
-	position: relative;
-	text-align: left;
-	display: inline-block;
-	padding-bottom: 0.625rem;
+.scroll {
+	transform: translateX(400%);
+	transition: 0.7s ease;
+}
+
+.scroll:nth-of-type(even) {
+	transform: translateX(-400%);
+}
+
+#work-section.work-section .show {
+	transform: translateX(0);
 }
 
 /* Caroucel */
@@ -453,6 +442,18 @@ div.col-md-6.column.col2 {
 }
 /* Caroucel */
 
+
+/* Pricing */
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+/* Enf of Pricing */
+
+
 /* CONTACT SECTION */
 #contact-section {
 	padding: 0;
@@ -504,29 +505,29 @@ div.col-md-6.column.col2 {
 #contact-section form .form-group .form-control {
 	display: inline-block;
 	width: 100%;
-	background: rgb(0, 202, 202);
+	background: rgb(233, 233, 224);
 	border-radius: 0;
 	min-height: 2rem;
 	height: 2rem;
-	border: 0;
-	color: #ffffff;
+	border: 1px solid rgba(0, 255, 255, 0.568);
+	color: #000;
 	font-size: 0.9375rem;
 	appearance: none;
 }
 
 #contact-section form .form-group .form-control:active,
 #contact-section form .form-group .form-control:focus {
-	background: #363636;
+	background: #b6b6b6;
 }
 
 #contact-section form .form-group textarea {
 	display: inline-block;
 	width: 100%;
 	height: 150px;
-	background: rgb(0, 202, 202);
+	background: rgb(233, 233, 224);
 	border-radius: 0;
-	border: 0;
-	color: #fff;
+	border: 1px solid rgba(0, 255, 255, 0.568);
+	color: rgb(14, 14, 14);
 	font-size: 0.9375rem;
 	transform-origin: all 5s;
 	appearance: none;
@@ -537,18 +538,19 @@ div.col-md-6.column.col2 {
 #contact-section form .form-group input.form-control:active,
 #contact-section form .form-group textarea:focus,
 #contact-section form .form-group textarea:active {
-	outline: none;
+	outline: 2px;
 	box-shadow: none;
+	background: #b6b6b6;
 }
 
 /* Contact Section Button */
 input.btn2 {
 	position: absolute;
 	color: rgb(0, 202, 202);
-	background-color: #2c2c2c88;
+	background-color: rgb(233, 233, 224);
 	letter-spacing: 1px;
 	padding: 10px 15px;
-	/* border: 1px solid rgba(0, 255, 255, 0.568); */
+	border: 1px solid rgba(0, 255, 255, 0.568);
 	top: 20rem;
 	left: auto;
 	overflow: hidden;
@@ -568,6 +570,7 @@ input.btn2:hover {
 	bottom: 40px;
 	right: 40px;
 }
+
 .gfq-badge {
 	background: rgb(0, 202, 202);
 	width: 60px;
@@ -578,6 +581,7 @@ input.btn2:hover {
 	transform: scale(1);
 	float: right;
 }
+
 .gfq-badge img {
 	position: relative;
 	left: 50%;
@@ -615,32 +619,20 @@ input.btn2:hover {
 	display: none;
 }
 .gfq-panel input[type="submit"] {
-	width: 100%;
+	width: 93%;
 }
 /* --------END OF CONTACT----------- */
 
-/* FOOTER */
-.footer-section {
-	background-color: #181818;
+
+
+/* Footer */
+.footer span.text-muted{
+	color: #30bea7;
 }
 
-.footer {
-	background-color: #181818;
-	width: 100%;
-	height: 2.8em;
-}
+/* End of Footer */
 
-ul.socials.foot li.social {
-	color: #909096;
-	padding: 0 10px;
-	margin: auto;
-}
 
-.footer-section ul.socials.foot li:hover {
-	color: aqua;
-	cursor: pointer;
-	transition: 0.7s ease-in-out;
-}
 
 /* Cursor */
 @media only screen and (min-width: 1450px) {
@@ -751,6 +743,7 @@ ul.socials.foot li.social {
 }
 /* -------BOUNCE TEXT END--------- */
 
+
 /* Media Queries*/
 @media only screen and (max-width: 720px) {
 	section#about-section.about-section {
@@ -846,15 +839,6 @@ ul.socials.foot li.social {
 	#contact-section {
 		height: 80vh;
 	}
-
-	.col-6.imageBackground {
-		display: none;
-	}
-
-	input.btn2 {
-		top: 100%;
-		left: auto;
-	}
 }
 
 @media only screen and (max-width: 767px) and (min-width: 721px) {
@@ -876,28 +860,63 @@ ul.socials.foot li.social {
 	}
 }
 
-/* @media only screen and (max-width: 989px;) and (min-width: 768px) { */
-/* #skills-section.skills-section {
-		height: 80vh;
+@media only screen and (max-width: 1400px) and (min-width: 990px) {
+	section#about-section.about-section {
+		height: 100vh;
+		width: auto;
 	}
 
-	#skills-section.skills-section .heading h2.sk{
-		font-size: 5rem;
-		font-weight: 100;
+	.container {
+		margin: auto;
+	}
+
+	h1 {
+		font-size: 3rem;
+		color: #ffffff;
+		font-weight: 600;
+		line-height: 2.5rem;
+	}
+
+	.ha {
+		margin-top: 2.3em;
+	}
+
+	a.btn1 {
+		top: 45%;
+		left: auto;
+	}
+
+	#skills-section.skills-section {
+		height: 90vh;
+	}
+
+	#skills-section.skills-section .heading h2 {
+		font-size: 2rem;
+		font-weight: 400;
 	}
 
 	div.col-md-6.column.col1 {
-		margin-top: 3em;
+		margin-top: 5em;
 	}
 
 	div.col-md-6.column.col2 {
 		margin-top: 9em;
 	}
-}
- */
 
-@media only screen and (max-width: 1349px) and (min-width: 990px) {
 	.col-6.imageBackground {
 		display: none;
+	}
+
+	input.btn2 {
+		top: 100%;
+		left: auto;
+	}
+
+	#work-section {
+		height: 80vh;
+	}
+
+	#contact-section {
+		height: 80vh;
 	}
 }

@@ -33,7 +33,7 @@ contactForm.addEventListener('submit', (e)=> {
 })
 
 // scroll effect
-const Scroll = document.querySelectorAll('#skills-section.skills-section')
+const Scroll = document.querySelectorAll('.featurette')
 
 window.addEventListener('scroll', checkBoxes)
 
@@ -84,14 +84,14 @@ $(document).ready(function () {
     $('.sk').html(nHTML);
 })
 
-// h2 bounce WORKS
+// h3 bounce Pricing
 $(document).ready(function () {
-    var letters = $('.wrk').text();
+    var letters = $('.prc').text();
     var nHTML = '';
     for (var letter of letters) {
         nHTML += "<span class='a'>" + letter + "</span>";
     }
-    $('.wrk').html(nHTML);
+    $('.prc').html(nHTML);
 })
 
 // h2 bounce CONTACT
