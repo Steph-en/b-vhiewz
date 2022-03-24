@@ -371,6 +371,7 @@ div.col-md-6.column.col2 {
 .carousel {
 	margin-bottom: 4rem;
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
 	bottom: 3rem;
@@ -378,16 +379,17 @@ div.col-md-6.column.col2 {
 }
 
 /* Declare heights because of positioning of img element */
-.carousel-item {
+/* .carousel-item {
 	height: 32rem;
+} */
+.carousel-inner img
+{
+  /* padding-top: 3rem;	 */
+    width: 100%;
+    height: 100vh;
+		background-size: cover;
 }
-.carousel-item > img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	height: 32rem;
-}
+
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -861,7 +863,7 @@ input.btn2:hover {
 }
 
 @media only screen and (max-width: 1400px) and (min-width: 990px) {
-	section#about-section.about-section {
+	/* section#about-section.about-section {
 		height: 100vh;
 		width: auto;
 	}
@@ -918,5 +920,5 @@ input.btn2:hover {
 
 	#contact-section {
 		height: 80vh;
-	}
+	} */
 }
