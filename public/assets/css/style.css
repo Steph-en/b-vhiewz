@@ -11,7 +11,7 @@ body {
 	font-family: "Nunito Sans", sans-serif;
 	box-sizing: border-box;
 	overflow-x: hidden;
-	background-color: rgb(233, 233, 224);
+	background-color: #222;
 	height: 100vh;
 }
 
@@ -347,7 +347,7 @@ div.col-md-6.column.col2 {
 
 /* WORKS SECTION */
 #work-section.work-section {
-	background-color: #5a9292;
+	background-color: #444;
 }
 
 .scroll {
@@ -443,17 +443,6 @@ div.col-md-6.column.col2 {
 	}
 }
 /* Caroucel */
-
-
-/* Pricing */
-.container {
-  max-width: 960px;
-}
-
-.pricing-header {
-  max-width: 700px;
-}
-/* Enf of Pricing */
 
 
 /* CONTACT SECTION */
@@ -563,7 +552,8 @@ input.btn2:hover {
 	color: #ffffff;
 	background-color: rgb(0, 202, 202);
 	border: 1px solid #fff;
-	transition: 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	transform: skewX(19deg);
 }
 
 .gfq-wrap {
